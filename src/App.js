@@ -57,7 +57,11 @@ class App extends React.Component {
         </Switch>
       </div>
     );
-  }  
+  }
+  
+  componentWillUnmount() {
+    this.unsubscribeFromAuth();
+  }
 }
 
 const mapStateToProps = createStructuredSelector({
